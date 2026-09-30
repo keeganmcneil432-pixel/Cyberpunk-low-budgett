@@ -21,7 +21,7 @@ jobs:
           npm init -y
           npm i @capacitor/core@6 @capacitor/android@6 @capacitor/cli@6 three@0.128.0
           cp node_modules/three/build/three.min.js www/
-          sed 's#https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js#three.min.js#' night-city-fps.html > www/index.html
+          sed 's#https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js#three.min.js#' night-city-fps-1.html > www/index.html
           echo '{"appId":"com.example.nightcityfps","appName":"Night City FPS","webDir":"www","server":{"androidScheme":"https"}}' > capacitor.config.json
           npx cap add android
           sed -i 's#<activity#<activity android:screenOrientation="sensorLandscape"#' android/app/src/main/AndroidManifest.xml
